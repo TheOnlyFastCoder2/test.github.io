@@ -1,0 +1,107 @@
+@import "./fonts.css";
+
+:root {
+	--color-light-gray: 242, 242, 243;
+	--color-gray: 147, 147, 154;
+	--color-dark: 6, 6, 21;
+	--color-white: 255, 255, 255;
+	--color-light: 217, 217, 217;
+
+	--font-family: "Roboto Flex", sans-serif;
+  --second-family: "Roboto Mono", sans-serif;
+	--scrollBarWidth: 8px;
+	--thumbRound: 4px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* box-shadow: 0 0 0 0.5px red; */
+}
+
+body {
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	padding: 20px;
+	font-family: var(--font-family);
+}
+
+#root {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width:  376px;
+	height: 690px;
+	padding: 16px 16px 0;
+	outline: 10px solid rgb(var(--color-dark), 0.05);
+}
+
+h2 {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 116%;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 86%;
+	letter-spacing: -0.02em;
+}
+
+h4 {
+	font-family: var(--second-family);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 116%;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+}
+
+svg {
+	cursor: pointer;
+}
+
+.scrollable {
+	padding: 3px;
+  &::-webkit-scrollbar {
+    width: var(--scrollBarWidth);
+    height: var(--scrollBarWidth);
+    background-color: transparent;
+	}
+
+	&::-moz-scrollbar {
+			height: var(--scrollBarWidth); 
+			width: var(--scrollBarWidth);
+	}
+
+	&::-ms-scrollbar {
+			height: var(--scrollBarWidth); 
+			width: var(--scrollBarWidth);
+	}
+
+	&::-webkit-scrollbar-thumb {
+			background: rgb(var(--color-gray), 0.5);
+			cursor: grab;
+			border-radius: var(--thumbRound);
+	}
+
+	&::-moz-scrollbar-thumb {
+			background: rgb(var(--color-gray), 0.5);
+			cursor: grab;
+			border-radius: var(--thumbRound);
+	}
+
+	&::-ms-scrollbar-thumb {
+			background: rgb(var(--color-gray), 0.5);
+			cursor: grab;
+			border-radius: var(--thumbRound);
+	}
+
+}
