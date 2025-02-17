@@ -1,0 +1,56 @@
+.Select {
+	position: relative;
+	width: min-content;
+
+	&, ul {
+		background-color: rgb(var(--color-light-gray));
+		border-radius: 10px;
+	}
+
+	&[open] {
+		summary svg {
+			transform: rotate(180deg);
+		}
+	}
+	summary, li {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 100%;
+		letter-spacing: -0.02em;
+		color: rgb(var(--color-gray));
+		padding: 11px 10px 12px 10px;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	summary {
+		display: flex;
+		gap: 4px;
+		justify-content: space-between;
+		align-items: center;
+		width: 120px;
+		height: 35px;
+	}
+
+	ul {
+		position: absolute;
+		top: 100%;
+		margin-top: 5px;
+		width: 100%;
+		list-style-type: none;
+		box-shadow: 0 0 15px rgb(var(--color-gray), 0.3);
+		
+		li {
+			&:hover {
+				background-color: rgb(var(--color-gray), 0.05);
+			}
+			&:not(li:last-child) {
+				border-bottom: 1px solid rgb(var(--color-gray), 0.2);
+			}
+		}
+	}
+}
